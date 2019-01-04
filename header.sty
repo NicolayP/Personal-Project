@@ -1,0 +1,11 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{header}[2017/09/21 v1.0.0 header]
+
+\newcommand\acYear[1]{\renewcommand\@acYear{Academic Year #1}}
+\newcommand\@acYear{\@latex@error{No \noexpand\acYear given}\@ehc}
+
+\newcommand\univ[1]{\renewcommand\@univ{#1}}
+\newcommand\@univ{\@latex@error{No \noexpand\univ given}\@ehc}
+
+\newcommand\subTitle[1]{\renewcommand\@subTitle{#1}}
+\newcommand\@subTitle{\@latex@error{No \noexpand\subTitle given}\@ehc}
