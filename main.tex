@@ -80,8 +80,7 @@
 \subTitle{Integration of libopencm3 in FreeRTOS for stm32f4 and stm32f3 MCU}
 \author{Pierre Nicolay}
 \acYear{2018-2019}
-\univ{University of Liège}
-\date{\today}
+\univ{University of Liège - Faculté des Sciences Appliquées}
 \makeatletter
 
 \begin{document}
@@ -89,9 +88,6 @@
 \begin{titlepage}
   \begin{textblock}{30}(150,20)
       \includegraphics[width=4cm]{Headers/ulg.png}
-  \end{textblock}
-  \begin{textblock}{30}(125,240)
-      \includegraphics[width=9.0cm]{Headers/facsa.png}
   \end{textblock}
   \hbox{
   \hspace*{0.2\textwidth}
@@ -103,7 +99,7 @@
     \\\HRule\\[2\baselineskip]
     {\Large \textsc{\@subTitle}}\\[4\baselineskip]
     {\large \textsc{\@author}}\\[2\baselineskip]
-    {\large \textsc{\@univ: }}
+    {\large \textsc{\@univ}}\\[2\baselineskip]
     {\large \textsc{\@acYear}}\\[20\baselineskip]
     \@date
   \end{flushleft}
@@ -114,15 +110,21 @@
 \end{titlepage}
 
 \tableofcontents
-\listoffigures
-\lstlistoflistings
 
 \newpage
 \chapter{Introduction}
 \label{ch:intro}
 This project lies in the scope of the \emph{RoboCupSoccer competition} project. For readers already familiar with this competition, we invite them to skip the introduction and pursue their reading at chapter \ref{ch:prob}.\newline
-The Robocup competition is an international science and technology tournament created in 1997 \cite{robocupHistory}. The goal is to promote technology and to advance the state-of-the-art in robotic and AI through a landmark project such as robots playing soccer. However the ultimate goal is the following: \newline ``by the middle of the 21st century, a team of fully autonomous humanoid robot soccer players shall win a soccer game, complying with the official rules of FIFA, against the winner of the most recent World Cup.'' \cite{RobocupObjective}.\newline
-The university of liege made up a team to take part in the competition. The category we want compete in is the \emph{Humanoid kidSize}. In contrast to the \emph{Standard Platform}, the \emph{Humanoid kidSize} doesn't provide a platform. Therefore we first needed to build a robotic platform. The platform illustrated in figure \ref{fig:platform} is composed of joint and links. 
+The \emph{Robocup competition} is an international science and technology tournament created in 1997 \cite{robocupHistory}. The goal is to promote technology and to advance the state-of-the-art in robotic and AI through a landmark project such as robots playing soccer. However the ultimate goal is the following: \newline ``by the middle of the 21st century, a team of fully autonomous humanoid robot soccer players shall win a soccer game, complying with the official rules of FIFA, against the winner of the most recent World Cup.'' \cite{RobocupObjective}.\newline
+The university of Liège made up a team to take part in the competition. The category we want compete in is the \emph{Humanoid kidSize}. In contrast to the \emph{Standard Platform}, the \emph{Humanoid kidSize} doesn't impose a specific robotic platform. We define a robotic platform as the entire physical elements of the robot.\newline
+The robotic platform for \emph{Standard Platform} is showed in Figure \ref{fig:nao}.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{fig/nao.jpeg}
+    \caption{Robotic platformed imposed for \emph{Standard Platform} competition.}
+    \label{fig:nao}
+\end{figure}
+Therefore we first needed to build a robotic platform. The platform illustrated in figure \ref{fig:platform} is composed of joint and links. 
 \begin{figure}[h]
   \begin{minipage}[c]{0.3\textwidth}
     \includegraphics[width=\textwidth]{figs/platform.png}
